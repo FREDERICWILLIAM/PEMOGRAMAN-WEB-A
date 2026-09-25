@@ -1,1 +1,0 @@
-document.getElementById("nama").innerHTML="matkul"
