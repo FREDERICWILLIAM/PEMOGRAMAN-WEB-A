@@ -1,0 +1,36 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="UTF-8">
+        <title>PROGRAM PASSWORD</title>
+    </head>
+<body>
+    <h2>LOGIN</h2>
+    <input type="text" id="username">
+    <input type="password" id="password">
+    <button onclick="login()">LOGIN</button>
+    <p id="hasil"></p> 
+
+<script>
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username == "" || password == "") {
+        hasil.innerHTML = "Tidak boleh kosong";
+    }
+    else if (username.length != 6) {
+        hasil.innerHTML = "Username harus 6 karakter";
+    }
+    else if (username == "MHS001" && password == "BasisA") {
+        hasil.innerHTML = "Login berhasil";
+    }
+    else {
+        hasil.innerHTML = "Login gagal";
+    }
+}
+
+    </script>
+</body>
+</html>
