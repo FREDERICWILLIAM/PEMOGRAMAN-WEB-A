@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Tugas Kalkulator Sederhana</title>
+</head>
+<body>
+    <h1>Kalkulator Tambah/Kurang</h1>
+    
+    Bilangan 1 <input type="text" id="bil1"><br>
+    Bilangan 2 <input type="text" id="bil2"><br>
+    
+    <button onclick="tambah()">Tambah</button>
+    <button onclick="kurang()">Kurang</button><br>
+    
+    Hasil <input type="text" id="hasil">
+
+    <script>
+        function tambah() {
+            var nilai1 = document.getElementById("bil1").value;
+            var nilai2 = document.getElementById("bil2").value;
+            
+            // Mengecek apakah input kosong menggunakan fungsi 'length' dari modul PPT
+            if (nilai1.length == 0 || nilai2.length == 0) {
+                document.getElementById("hasil").value = "tidak bisa";
+            } else {
+                var penjumlahan = Number(nilai1) + Number(nilai2);
+                document.getElementById("hasil").value = penjumlahan;
+            }
+        }
+
+        function kurang() {
+            var nilai1 = document.getElementById("bil1").value;
+            var nilai2 = document.getElementById("bil2").value;
+            
+            if (nilai1.length == 0 || nilai2.length == 0) {
+                // Menampilkan output peringatan
+                document.getElementById("hasil").value = "tidak ada angka yang di input";
+            } else {
+                var pengurangan = nilai1 - nilai2;
+                document.getElementById("hasil").value = pengurangan;
+            }
+        }
+    </script>
+</body>
+</html>
