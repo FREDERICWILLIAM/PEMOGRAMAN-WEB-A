@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi - Frederic William</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVIGASI -->
+    <header id="beranda">
+        <div class="header-profil">
+            <img src="C436F7D7-7777-4C1A-946D-BC71BB4A713F.jpg" alt="Foto Profil Frederic" width="100" height="100">
+            <div>
+                <h1>Frederic William Parengkuan Sambe</h1>
+                <h2>NIM: 255314029</h2>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#perkenalan">Perkenalan</a></li>
+                <li><a href="#hobi">Hobi & Keahlian</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+        
+        <!-- TOMBOL PRAKTIKUM: Mode Gelap -->
+        <button id="btn-tema">Mode Gelap (Bisa juga tekan 'D')</button>
+    </header>
+
+    <!-- 2. MAIN (Area Konten Utama) -->
+    <main>
+        <div class="konten-utama">
+            
+            <section id="perkenalan">
+                <h2>Perkenalan Singkat</h2>
+                <p><strong>PRODI:</strong> INFORMATIKA</p>
+                <p><strong>STATUS:</strong> MAHASISWA</p>
+                <p><strong>UNIVERSITAS:</strong> SANATA DHARMA</p>
+                <p><strong>UMUR:</strong> 19 TAHUN</p>
+                <p><strong>KOTA ASAL:</strong> LUWUK BANGGAI</p>
+                <p>Pernah mendapatkan 1x MVP U-17 Bupati Cup (<a href="https://luwuktimes.id/kompetisi-basket-seleksi-popda-sulteng-di-luwuk-banggai-berakhir-ini-para-juaranya/" target="_blank">baca beritanya di sini</a>).</p>
+            </section>
+            <hr>
+
+            <section id="hobi">
+                <h2>Keahlian & Hobi</h2> 
+                <h3 style="margin-top: 20px;">Daftar Hobi (Dirender via JavaScript)</h3>
+                <div class="daftar-artikel">
+                    <!-- Artikel akan muncul di sini otomatis dari script -->
+                </div>
+            </section>
+            <hr>
+
+            <section id="portofolio">
+                <h2>Pengalaman & Portofolio</h2>
+                <button id="btn-tambah-porto">+ Tambah Portofolio Baru</button>
+                <div id="container-portofolio" class="daftar-artikel" style="margin-top: 20px;">
+                    <!-- Portofolio akan dirender via JS di sini -->
+                </div>
+            </section>
+            
+        </div> 
+               <div style="margin-bottom: 10px;">
+            <button id="btn-info">Info Tambahan</button>
+        </div>
+
+
+        <aside id="kontak">
+            <button id="btn-info" style="margin-bottom: 10px;">Info Tambahan</button>
+            <h2>Informasi Kontak</h2>
+            <p>Email: fredericwilliam90@gmail.com</p>
+        </aside>
+
+        <!-- TAMBAHAN MODUL 5: FORM KOMENTAR -->
+        <section id="komentar" style="width: 100%; margin-top: 40px; padding: 20px; border-top: 2px solid #ccc;">
+            <h2>Tinggalkan Komentar</h2>
+            
+            <!-- Tempat pesan error (Tugas Mandiri) -->
+            <div id="pesan-error" style="color: red; font-weight: bold; margin-bottom: 10px; display: none;"></div>
+            
+            <form id="form-komentar">
+                <input type="text" id="input-nama" placeholder="Nama Anda" style="display: block; margin-bottom: 10px; padding: 8px; width: 100%; max-width: 300px;">
+                <textarea id="input-pesan" placeholder="Tulis komentar (minimal 5 karakter)..." style="display: block; margin-bottom: 10px; padding: 8px; width: 100%; max-width: 400px; height: 80px;"></textarea>
+                
+                <button type="submit">Kirim Komentar</button>
+                <button type="button" id="btn-hapus-semua" style="background-color: #ef4444;">Hapus Semua Komentar</button>
+            </form>
+            
+            <ul id="daftar-komentar" style="margin-top: 20px; list-style-type: none; padding: 0;"></ul>
+        </section>
+
+    </main>
+
+    <!-- TAMBAHAN MODUL 5: TOMBOL KEMBALI KE ATAS (Opsional Tugas Mandiri) -->
+    <button id="btn-scroll-top" class="tersembunyi" style="position: fixed; bottom: 20px; right: 20px; border-radius: 50%; padding: 15px 20px; font-size: 18px; z-index: 1000;">⬆</button>
+
+    <footer>
+        <p>&copy; 2026 Frederic William Parengkuan Sambe.</p>
+    </footer>
+
+    <!-- KONEKSI FILE JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
