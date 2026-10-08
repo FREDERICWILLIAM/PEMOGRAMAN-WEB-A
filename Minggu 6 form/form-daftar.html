@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulir Pendaftaran</h2>
+        
+        <form id="form-pendaftaran">
+            
+            <!-- BAGIAN 1: DATA PRIBADI -->
+            <fieldset>
+                <legend>Data Pribadi</legend>
+                
+                <label for="nama">Nama Lengkap (Sesuai Ijazah):</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required minlength="3">
+                <span id="error-nama" class="pesan-error"></span>
+
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="jk-pria" name="jenisKelamin" value="Laki-laki" required>
+                    <label for="jk-pria">Laki-laki</label>
+                    <input type="radio" id="jk-wanita" name="jenisKelamin" value="Perempuan">
+                    <label for="jk-wanita">Perempuan</label>
+                </div>
+                <span id="error-jk" class="pesan-error"></span> 
+
+                <label for="agama">Agama:</label>
+                <select id="agama" required>
+                    <option value="" disabled selected>Pilih Agama...</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Budha</option>
+                    <option value="Lainnya">Lain-lain</option>
+                </select>
+                <span id="error-agama" class="pesan-error"></span>
+
+                <label for="email">Alamat E-mail:</label>
+                <input type="email" id="email" placeholder="contoh@email.com" required>
+                <span id="error-email" class="pesan-error"></span>
+
+                <label for="nohp">No. Handphone:</label>
+                <input type="tel" id="nohp" placeholder="08xxxxxxxxxx" required pattern="^[0-9]{10,13}$">
+                <span id="error-nohp" class="pesan-error"></span>
+            </fieldset>
+
+            <!-- BAGIAN 2: PENDIDIKAN -->
+            <fieldset>
+                <legend>Data Pendidikan</legend>
+                
+                <label for="sekolah">Nama Sekolah Menengah (Asal):</label>
+                <input type="text" id="sekolah" placeholder="Contoh: SMAN 1 Luwuk" required minlength="4">
+                <span id="error-sekolah" class="pesan-error"></span>
+
+                <label for="prodi">Program Studi Yang Dipilih:</label>
+                <select id="prodi" required>
+                    <option value="" disabled selected>Pilih Program Studi...</option>
+                    <option value="PGSD">Pendidikan Guru Sekolah Dasar (S1)</option>
+                    <option value="BK">Bimbingan dan Konseling (S1)</option>
+                    <option value="Psikologi">Psikologi (S1)</option>
+                    <option value="Informatika">Informatika (S1)</option>
+                </select>
+                <span id="error-prodi" class="pesan-error"></span>
+            </fieldset>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
