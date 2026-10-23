@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+}
+
+h2, h3, p, ul {
+    margin-bottom: 40px; 
+}
+ul {
+    margin-left: 20px;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    background-color: #16bee0;
+    color: rgb(9, 10, 3);
+}
+header nav ul { 
+    display: flex; 
+    gap: 16px; 
+    list-style-type: none; 
+}
+
+header nav a { 
+    color: white; 
+    text-decoration: none; 
+}
+
+.daftar-artikel {
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    padding: 24px;
+}
+.daftar-artikel article {
+    border: 1px solid #440909;
+    border-radius: 8px; 
+    padding: 16px;
+    transition: all 0.3s ease; 
+}
+main { 
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+}
+aside {
+    background-color: rgb(73, 31, 190);
+    padding: 16px;
+    border-radius: 8px;
+    color: white; 
+}
+
+@media (min-width: 768px) { 
+    .daftar-artikel { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main { flex-direction: row; }
+    main > section { flex: 3; }
+    main > aside { flex: 1; }
+}
+
+@media (min-width: 992px) { 
+    .daftar-artikel { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode header {
+    background-color: #0d7085; 
+    color: #f2f2f2;
+}
+body.dark-mode aside {
+    background-color: #2b126e; 
+}
+body.dark-mode .daftar-artikel article {
+    border-color: #666; 
+    background-color: #2a2a2a;
+}
+body.dark-mode input, 
+body.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.tersembunyi {
+    display: none !important; 
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+
+.artikel-hover {
+    background-color: #e6f7ff; 
+    transform: scale(1.02); 
+}
+body.dark-mode .artikel-hover {
+    background-color: #3d3d3d; 
+}
+
+#form-komentar input:valid, 
+#form-komentar textarea:valid {
+    border: 2px solid #10b981; 
+}
+#form-komentar input:invalid:not(:placeholder-shown), 
+#form-komentar textarea:invalid:not(:placeholder-shown) {
+    border: 2px solid #ef4444; 
+}
+
+#btn-reset {
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+#btn-reset:hover {
+    background-color: red !important;
+    color: white !important;
+}
