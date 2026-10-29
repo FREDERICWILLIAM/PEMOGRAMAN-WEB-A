@@ -1,0 +1,265 @@
+/* ==========================================
+   STYLING DASAR & TEMA Halaman Profil
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f9fafb;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header-profil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-profil img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Umum */
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Konten Utama & Section */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 20px 0;
+}
+
+/* ==========================================
+   [MODUL 8: FETCH API & JSON] — STYLING LOADING & ARTIKEL
+   ========================================== */
+.teks-loading {
+    font-style: italic;
+    color: #6b7280;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.daftar-artikel {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+article {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efek Hover Artikel (Modul 4) */
+.artikel-hover {
+    background-color: #f0fdf4 !important;
+    transform: translateY(-2px);
+    border-color: #86efac;
+}
+
+/* Aside / Info Kontak */
+aside {
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Form Komentar & Input */
+#komentar {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+}
+
+#form-komentar input, 
+#form-komentar textarea {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+#pesan-error {
+    color: #ef4444;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #fef2f2;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #fca5a5;
+    max-width: 450px;
+}
+
+.area-tombol-komentar {
+    display: flex;
+    gap: 10px;
+}
+
+#btn-hapus-semua {
+    background-color: #ef4444;
+}
+
+#daftar-komentar {
+    margin-top: 20px;
+    list-style: none;
+}
+
+#daftar-komentar li {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+}
+
+/* Floating Scroll Top Button */
+#btn-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 18px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+#btn-reset {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+}
+
+#btn-reset:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Class Helper */
+.tersembunyi {
+    display: none !important;
+}
+
+/* ==========================================
+   MODE GELAP (DARK MODE)
+   ========================================== */
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode header,
+body.dark-mode article,
+body.dark-mode #daftar-komentar li {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+body.dark-mode nav a {
+    color: #60a5fa;
+}
+
+body.dark-mode aside {
+    background-color: #1e293b;
+    border-left-color: #60a5fa;
+}
+
+body.dark-mode #form-komentar input,
+body.dark-mode #form-komentar textarea {
+    background-color: #1f2937;
+    color: #ffffff;
+    border-color: #374151;
+}
+
+body.dark-mode .artikel-hover {
+    background-color: #064e3b !important;
+    border-color: #059669;
+}
